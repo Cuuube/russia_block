@@ -1,0 +1,23 @@
+{
+  "name": "russia_block",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cuuube/russia_block.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cuuube/russia_block/issues"
+  },
+  "homepage": "https://github.com/Cuuube/russia_block#readme",
+  "devDependencies": {
+    "typescript": "^2.8.3"
+  }
+}
