@@ -102,17 +102,17 @@ class Point {
     }
 }
 
-class Points {
-    constructor (arr) {
-        this.points = arr;
-    }
-    push (point) {
-        this.points.push(point);
-        return this;
-    }
-    toArray () {
-        return this.points.map((val) => [val.x, val.y]);
-    }
+class Points extends Array{
+    // constructor (arr) {
+    //     this.points = arr;
+    // }
+    // push (point) {
+    //     this.points.push(point);
+    //     return this;
+    // }
+    // toArray () {
+    //     return this.points.map((val) => [val.x, val.y]);
+    // }
 }
 
 class BuildingBlocks {
@@ -125,10 +125,7 @@ class BuildingBlocks {
         
     }
     getPoints() {
-        return this.points.points;
-    }
-    toArray () {
-        return this.points.toArray();
+        return this.points;
     }
 }
 
@@ -143,7 +140,7 @@ class OBlock extends BuildingBlocks{
     createPoints (point) {
         let x0 = point.x;
         let y0 = point.y;
-        let points = new Points([]);
+        let points = new Points();
         points.push(new Point(x0, y0))
               .push(new Point(x0 - 1, y0))
               .push(new Point(x0, y0 - 1))
@@ -166,7 +163,7 @@ class Lblock extends BuildingBlocks{
     createPoints (point) {
         let x0 = point.x;
         let y0 = point.y;
-        let points = new Points([]);
+        let points = new Points();
         points.push(new Point(x0, y0 + 1))
               .push(new Point(x0, y0))
               .push(new Point(x0, y0 - 1))
@@ -185,7 +182,7 @@ class LBlockLeft extends BuildingBlocks{
     createPoints (point) {
         let x0 = point.x;
         let y0 = point.y;
-        let points = new Points([]);
+        let points = new Points();
         points.push(new Point(x0, y0 + 1))
               .push(new Point(x0, y0))
               .push(new Point(x0, y0 - 1))
@@ -204,7 +201,7 @@ class IBlock extends BuildingBlocks{
     createPoints (point) {
         let x0 = point.x;
         let y0 = point.y;
-        let points = new Points([]);
+        let points = new Points();
         points.push(new Point(x0, y0 + 1))
               .push(new Point(x0, y0))
               .push(new Point(x0, y0 - 1))
@@ -223,7 +220,7 @@ class BlockLeft extends BuildingBlocks{
     createPoints (point) {
         let x0 = point.x;
         let y0 = point.y;
-        let points = new Points([]);
+        let points = new Points();
         points.push(new Point(x0, y0 + 1))
               .push(new Point(x0, y0))
               .push(new Point(x0 + 1, y0))
@@ -242,7 +239,7 @@ class BlockRight extends BuildingBlocks{
     createPoints (point) {
         let x0 = point.x;
         let y0 = point.y;
-        let points = new Points([]);
+        let points = new Points();
         points.push(new Point(x0, y0 + 1))
               .push(new Point(x0, y0))
               .push(new Point(x0 - 1, y0))
@@ -261,7 +258,7 @@ class TBlock extends BuildingBlocks{
     createPoints (point) {
         let x0 = point.x;
         let y0 = point.y;
-        let points = new Points([]);
+        let points = new Points();
         points.push(new Point(x0, y0 + 1))
               .push(new Point(x0, y0))
               .push(new Point(x0 - 1, y0))
